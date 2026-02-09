@@ -76,6 +76,9 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        .lista{
+            margin-top: 10px;
+        }
         .lista img{
             display: block;
             width: 0%;
@@ -85,6 +88,10 @@
         .lista:hover img{
             display: block;
             width: 30%;
+            background-color: #fafafaa9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 2px #000000;
         }
         .carousel-conteiner{
             max-width: 400px;
