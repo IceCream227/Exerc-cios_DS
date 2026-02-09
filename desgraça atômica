@@ -1,100 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         @import url('https://fonts.cdnfonts.com/css/valorant');
+        @import "@fontsource/roboto/500.css";
 
-        body {
+        h1, h2, h3 {
             font-family: 'Valorant', sans-serif;
-            background-color: #fff;
         }
 
-        *{
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2{
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        table{
+
+        table {
             margin: 0 auto;
         }
-        ul{
+
+        ul {
             list-style-type: none;
         }
-        header{
+
+        header {
             background-color: #000000;
             text-align: center;
             border-radius: 4px;
-            padding: 20px;
+            padding: 1.5rem;
             box-shadow: 0 2px 12px #FD4556;
-            color:#FFF;
+            color: #FFF;
         }
-        footer{
+
+        footer {
             background-color: #000000;
             text-align: center;
             border-radius: 4px;
-            padding: 20px;
+            padding: 1.5rem;
             box-shadow: 0 0 12px #FD4556;
             color: #fff;
         }
-        .btn{
+
+        .btn {
             background-color: #53212B;
             border: none;
             transition: 0.5s ease;
             font-family: 'Valorant', sans-serif;
             color: #a0a0a0;
-            padding: 5px;
+            padding: 0.313rem;
             border-radius: 5px;
             cursor: pointer;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: #BD3944;
             color: #fff;
         }
-        #principal{
+
+        #principal {
             background-color: #FFF;
             text-align: center;
             border-radius: 4px;
-            padding: 20px;
+            padding: 1.25rem;
             border: 2px solid #ccc;
             border-radius: 4px;
-            width: 60%;
+            width: 60vw;
             margin: 0 auto;
-            margin-top: 20px;
+            margin-top: 1.25rem;
         }
-        #conteudos{
+
+        #conteudos {
             background-color: #FFF;
             text-align: center;
             border-radius: 4px;
-            padding: 20px;
+            padding: 1.25rem;
             border: 2px solid #ccc;
             border-radius: 4px;
-            width: 60%;
+            width: 60vw;
             margin: 0 auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
         }
-        .lista{
-            margin-top: 10px;
+
+        .lista {
+            margin-top: 0.625rem;
+            width: 30vw;
+            max-width: 30vw;
+            margin: 0 auto;
+            padding-top: 1.25rem;
         }
-        .lista img{
+
+        .lista img {
             display: block;
             width: 0%;
             transition: all 0.5s ease;
             margin: 0 auto;
         }
-        .lista:hover img{
+
+        .lista:hover img {
             display: block;
-            width: 30%;
+            width: 10vw;
             background-color: #fafafaa9;
-            padding: 20px;
+            padding: 1.25rem;
             border-radius: 5px;
             box-shadow: 0 0 2px #000000;
         }
-        .carousel-conteiner{
-            max-width: 400px;
+
+        .carousel-conteiner {
+            max-width: 40vw;
             width: 100%;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -102,24 +132,28 @@
             margin: 0 auto;
             position: relative;
         }
-        .slides{
+
+        .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
             transform: translateX(0);
         }
-        .slides img{
+
+        .slides img {
             display: block;
             width: 100%;
             min-width: 100%;
             object-fit: cover;
         }
-        button.prev, button.next {
+
+        button.prev,
+        button.next {
             position: absolute;
             top: 50%;
             background-color: rgba(0, 0, 0, 0.767);
             color: white;
             border: none;
-            padding: 5px;
+            padding: 0.313rem;
             cursor: pointer;
             font-size: 15px;
             z-index: 10;
@@ -127,20 +161,50 @@
             margin: 0 10px;
             transition: transform 0.5s ease;
         }
-        button:hover{
+
+        button:hover {
             transform: scale(1.1);
         }
-        button:active{
+
+        button:active {
             transform: scale(0.5);
         }
-        .next{
+
+        .next {
             right: 0;
         }
-        .prev{
+
+        .prev {
             left: 0;
+        }
+
+        @media screen and (max-width: 768px) { 
+            h1{
+                font-size: 2rem;
+            }
+            h2{
+                font-size: 1.75rem;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            h1{
+                font-size: 1.75rem;
+            }
+            h2{
+                font-size: 1.45rem;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            h1{
+                font-size: 1.75rem;
+            }
+            h2{
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Valorant</h1>
@@ -155,46 +219,50 @@
             <h2>Principal Section</h2>
             <div class="carousel-conteiner">
                 <div class="slides">
-                    <img src="https://i.ytimg.com/vi/q0M5FQbgiQY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqZXt1p5zECeyDhsUr9crzIOJomw" alt="Slide 1">
-                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/cf2a712d7ea9b16299ae60ec543408f42c617b72-2048x1414.jpg" alt="Slide 2">
-                    <img src="https://cdn-62cb22a2c1ac1835ecef9f37.closte.com/wp-content/uploads/2024/08/imagem_2024-08-26_012428697.png" alt="Slide 3">
-                    <img src="https://noticias.maisesports.com.br/wp-content/uploads/2025/10/vrg-campea-valorant-champions-2025.jpg" alt="Slide 4">
+                    <img src="https://i.ytimg.com/vi/q0M5FQbgiQY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqZXt1p5zECeyDhsUr9crzIOJomw"
+                        alt="Slide 1">
+                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/cf2a712d7ea9b16299ae60ec543408f42c617b72-2048x1414.jpg"
+                        alt="Slide 2">
+                    <img src="https://cdn-62cb22a2c1ac1835ecef9f37.closte.com/wp-content/uploads/2024/08/imagem_2024-08-26_012428697.png"
+                        alt="Slide 3">
+                    <img src="https://noticias.maisesports.com.br/wp-content/uploads/2025/10/vrg-campea-valorant-champions-2025.jpg"
+                        alt="Slide 4">
                 </div>
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>
             </div>
         </section>
 
-            <section id="conteudos">
-                <h2>Contents</h2>
-                
-                <article>
-                    <h2>Champions Winners - Valorant</h2>
-                    <ul>
-                        <li class="lista">
-                            <span>LOUD</span>
-                            <img src="https://owcdn.net/img/62bbec8dc1b9f.png" alt="img1">
-                        </li>
-                        <li class="lista">
-                            <span>NRG</span>
-                            <img src="https://owcdn.net/img/6610f026c1a9e.png" alt="img2">
-                        </li>
-                        <li class="lista">
-                            <span>EG</span>
-                            <img src="https://owcdn.net/img/667462f046618.png" alt="img3">
-                        </li>
-                        <li class="lista">
-                            <span>EDG</span>
-                            <img src="https://owcdn.net/img/62c82049253b2.png" alt="img4">
-                        </li>
-                    </ul>
-                </article>
-                
-                <article>
-                    <h2>Título 2</h2>
-                    <p>Conteúdo do texto 2</p>
-                </article>
-                    <section>
+        <section id="conteudos">
+            <h2>Contents</h2>
+
+            <article>
+                <h2>Champions Winners - Valorant</h2>
+                <ul>
+                    <li class="lista">
+                        <span>LOUD</span>
+                        <img src="https://owcdn.net/img/62bbec8dc1b9f.png" alt="img1">
+                    </li>
+                    <li class="lista">
+                        <span>NRG</span>
+                        <img src="https://owcdn.net/img/6610f026c1a9e.png" alt="img2">
+                    </li>
+                    <li class="lista">
+                        <span>EG</span>
+                        <img src="https://owcdn.net/img/667462f046618.png" alt="img3">
+                    </li>
+                    <li class="lista">
+                        <span>EDG</span>
+                        <img src="https://owcdn.net/img/62c82049253b2.png" alt="img4">
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Title 2</h2>
+                <p>Text Two Content</p>
+            </article>
+            <section>
                 <table border="1">
                     <thead>
                         <tr>
@@ -205,22 +273,26 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td onclick="window.location='https://www.vlr.gg/team/6961/loud';" style="cursor: pointer; color: blue;">Loud</td>
+                            <td onclick="window.location='https://www.vlr.gg/team/6961/loud';"
+                                style="cursor: pointer; color: #FD4556;">Loud</td>
                             <td>America</td>
                             <td>1</td>
                         </tr>
                         <tr>
-                            <td onclick="window.location='https://www.vlr.gg/team/1034/nrg';" style="cursor: pointer; color: blue;">NRG</td>
+                            <td onclick="window.location='https://www.vlr.gg/team/1034/nrg';"
+                                style="cursor: pointer; color: #FD4556;">NRG</td>
                             <td>America</td>
                             <td>1</td>
                         </tr>
                         <tr>
-                            <td onclick="window.location='https://www.vlr.gg/team/5248/evil-geniuses'" style="cursor: pointer; color: blue;">EG</td>
+                            <td onclick="window.location='https://www.vlr.gg/team/5248/evil-geniuses'"
+                                style="cursor: pointer; color: #FD4556;">EG</td>
                             <td>America</td>
                             <td>1</td>
                         </tr>
                         <tr>
-                            <td onclick="window.location='https://www.vlr.gg/team/1120/edward-gaming'" style="cursor: pointer; color: blue;">EDG</td>
+                            <td onclick="window.location='https://www.vlr.gg/team/1120/edward-gaming'"
+                                style="cursor: pointer; color: #FD4556;">EDG</td>
                             <td>China</td>
                             <td>1</td>
                         </tr>
@@ -246,13 +318,13 @@
 
         let index = 0;
 
-        elemBtnPrev.addEventListener('click', () =>{
+        elemBtnPrev.addEventListener('click', () => {
             index--;
             if (index < 0) index = tamanhoLista;
             atualizarCarrossel();
             console.log(index);
         });
-        elemBtnNext.addEventListener('click', () =>{
+        elemBtnNext.addEventListener('click', () => {
             index++;
             if (index > tamanhoLista) index = 0;
             atualizarCarrossel();
@@ -264,4 +336,5 @@
         }
     </script>
 </body>
+
 </html>
