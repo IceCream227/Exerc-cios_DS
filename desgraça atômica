@@ -22,7 +22,6 @@
         }
         ul{
             list-style-type: none;
-            margin-right: 30px;
         }
         header{
             background-color: #000000;
@@ -48,7 +47,7 @@
             color: #a0a0a0;
             padding: 5px;
             border-radius: 5px;
-            
+            cursor: pointer;
         }
         .btn:hover{
             background-color: #BD3944;
@@ -76,6 +75,16 @@
             margin: 0 auto;
             margin-top: 20px;
             margin-bottom: 20px;
+        }
+        .lista img{
+            display: block;
+            width: 0%;
+            transition: all 0.5s ease;
+            margin: 0 auto;
+        }
+        .lista:hover img{
+            display: block;
+            width: 30%;
         }
         .carousel-conteiner{
             max-width: 400px;
@@ -154,10 +163,23 @@
                 
                 <article>
                     <h2>Champions Winners - Valorant</h2>
-                    <ul role="list">
-                        <li>Loud</li>
-                        <li>NRG</li>
-                        <li>EG</li>
+                    <ul>
+                        <li class="lista">
+                            <span>LOUD</span>
+                            <img src="https://owcdn.net/img/62bbec8dc1b9f.png" alt="img1">
+                        </li>
+                        <li class="lista">
+                            <span>NRG</span>
+                            <img src="https://owcdn.net/img/6610f026c1a9e.png" alt="img2">
+                        </li>
+                        <li class="lista">
+                            <span>EG</span>
+                            <img src="https://owcdn.net/img/667462f046618.png" alt="img3">
+                        </li>
+                        <li class="lista">
+                            <span>EDG</span>
+                            <img src="https://owcdn.net/img/62c82049253b2.png" alt="img4">
+                        </li>
                     </ul>
                 </article>
                 
@@ -188,6 +210,11 @@
                         <tr>
                             <td onclick="window.location='https://www.vlr.gg/team/5248/evil-geniuses'" style="cursor: pointer; color: blue;">EG</td>
                             <td>America</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td onclick="window.location='https://www.vlr.gg/team/1120/edward-gaming'" style="cursor: pointer; color: blue;">EDG</td>
+                            <td>China</td>
                             <td>1</td>
                         </tr>
                     </tbody>
