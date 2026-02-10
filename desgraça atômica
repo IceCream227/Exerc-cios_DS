@@ -25,6 +25,10 @@
             font-family: 'Roboto', sans-serif;
             margin-bottom: 1rem;
         }
+        span{
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+        }
 
         * {
             padding: 0;
@@ -34,6 +38,9 @@
 
         table {
             margin: 0 auto;
+            border: none;
+            box-shadow: 0 1px 15px #FD4556;
+            border-radius: 5px;
         }
 
         ul {
@@ -57,7 +64,17 @@
             box-shadow: 0 0 12px #FD4556;
             color: #fff;
         }
-
+        td, th{
+            padding: 0.5rem;
+            border: none;
+            transition: transform 0.5s ease;
+        }
+        td:nth-child(1):hover{
+            transform: scale(1.2);
+        }
+        td:nth-child(1):active{
+            transform: scale(0.5);
+        }
         .btn {
             background-color: #53212B;
             border: none;
@@ -72,6 +89,7 @@
         .btn:hover {
             background-color: #BD3944;
             color: #fff;
+            box-shadow: 0 1px 12px #FD4556;
         }
 
         #principal {
@@ -131,6 +149,7 @@
             border-radius: 10px;
             margin: 0 auto;
             position: relative;
+            aspect-ratio: 16 / 9;
         }
 
         .slides {
@@ -177,13 +196,26 @@
         .prev {
             left: 0;
         }
-
+        @media screen and (max-width: 820px) {
+            .lista img{
+                width: 30vw;
+                opacity: 1;
+            }
+        }
         @media screen and (max-width: 768px) { 
             h1{
                 font-size: 2rem;
             }
             h2{
                 font-size: 1.75rem;
+            }
+            .lista img{
+                width: 30vw;
+                opacity: 1;
+            }
+            .carousel-conteiner{
+                max-width: 100%;
+                width: 80vw;
             }
         }
         @media screen and (max-width: 576px) {
@@ -193,6 +225,14 @@
             h2{
                 font-size: 1.45rem;
             }
+            .lista img{
+                width: 30vw;
+                opacity: 1;
+            }
+            .carousel-conteiner{
+                max-width: 100%;
+                width: 80vw;
+            }
         }
         @media screen and (max-width: 400px) {
             h1{
@@ -200,6 +240,14 @@
             }
             h2{
                 font-size: 1rem;
+            }
+            .lista img{
+                width: 30vw;
+                opacity: 1;
+            }
+            .carousel-conteiner{
+                max-width: 100%;
+                width: 80vw;
             }
         }
     </style>
@@ -216,7 +264,6 @@
 
     <main>
         <section id="principal">
-            <h2>Principal Section</h2>
             <div class="carousel-conteiner">
                 <div class="slides">
                     <img src="https://i.ytimg.com/vi/q0M5FQbgiQY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqZXt1p5zECeyDhsUr9crzIOJomw"
@@ -234,8 +281,6 @@
         </section>
 
         <section id="conteudos">
-            <h2>Contents</h2>
-
             <article>
                 <h2>Champions Winners - Valorant</h2>
                 <ul>
@@ -258,12 +303,8 @@
                 </ul>
             </article>
 
-            <article>
-                <h2>Title 2</h2>
-                <p>Text Two Content</p>
-            </article>
             <section>
-                <table border="1">
+                <table border="1" style="margin-top: 1.25rem;">
                     <thead>
                         <tr>
                             <th>Team</th>
