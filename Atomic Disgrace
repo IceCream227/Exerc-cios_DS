@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/valorant');
+        @import "@fontsource/roboto/500.css";
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Valorant', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 0.7rem;
+        }
+
+        span{
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        header {
+            background-color: #000000;
+            text-align: center;
+            border-radius: 4px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px #FD4556;
+            color: #FFF;
+        }
+        input{
+            border-radius: 4px;
+            border: 2px solid #FD4556;
+            padding: 0.2rem;
+        }
+        input#sub{
+            font-family: 'Valorant', sans-serif;
+            padding: 0.313rem;
+            color: #a0a0a0;
+            background-color: #53212B;
+            border: none;
+            border: 5px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        input#sub:hover{
+            background-color: #BD3944;
+            color: #fff;
+            box-shadow: 0 1px 12px #FD4556;
+        }
+        #sub:hover{
+            transform: scale(1.1);
+        }
+        #sub:active{
+            transform: scale(0.8);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .sec1{
+            margin: 0 auto;
+            margin-top: 4rem;
+            border: 2px solid #ccc;
+            text-align: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 1rem;
+            width: 17vw;
+        }
+
+        .btn{
+            background-color: #53212B;
+            border: none;
+            transition: 0.5s ease;
+            font-family: 'Valorant', sans-serif;
+            color: #a0a0a0;
+            padding: 0.313rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #BD3944;
+            color: #fff;
+            box-shadow: 0 1px 12px #FD4556;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.5);
+        }
+        
+        select{
+            padding: 0.313rem;
+            border: 2px solid #FD4556;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Valorant</h1>
+        <nav>
+            <a href="index.html"><button class="btn">Return</button></a><br><br>
+        </nav>
+    </header>
+    <section class="sec1">
+        <div>
+            <form id="cadForm">
+                <h2>Cadastrar-se</h2>
+                <span>Nome de Usuário</span><br>
+                <input type="text" maxlength="20" required><br><br>
+                <span>E-mail</span><br>
+                <input type="email" required><br><br>
+                <span>Senha</span><br>
+                <input type="password" required><br><br>
+                <span>Ano de Nascimento</span><br>
+                <select id="ano" required>
+                    <option value="">----</option>
+                </select><br><br>
+                <input id="sub" type="submit">
+
+                <p id="text"></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        (function preencherAnos() {
+                const selectAno = document.getElementById("ano");
+                const anoAtual = new Date().getFullYear();
+                const anoInicial = 1940;
+
+                for (let ano = anoAtual; ano >= anoInicial; ano--) {
+                    const option = document.createElement("option");
+                    option.value = ano;
+                    option.textContent = ano;
+                    selectAno.appendChild(option);
+                }
+            })()
+        const form = document.getElementById('cadForm');
+        const msgText = document.getElementById('text');
+        const selectAno = document.getElementById('ano');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const anoNascimento = parseInt(selectAno.value);
+            const anoAtual = new Date().getFullYear();
+
+            if (idade >= 18) {
+                msgText.innerText = "Cadastro realizado com sucesso!";
+                msgText.style.color = "green";
+
+            } else {
+                msgText.innerText = "É necessário ter 18+ para prosseguir.";
+                msgText.style.color = "red";
+            }
+    });
+    </script>
+</body>
+</html>
