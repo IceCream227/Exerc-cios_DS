@@ -261,7 +261,7 @@
         <section id="PLA">
             <h2>Planos</h2>
             <article  id="planos">
-                <section class="plans">
+                <section class="plans" style="background-color: #ffe5b7;">
                     <h2>Condado</h2>
                     <p>Com este plano você terá acesso a:</p><br>
                     <ul>
@@ -271,7 +271,7 @@
                     </ul><br><br>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn">Assine Já</button></a>
                 </section>
-                <section class="plans">
+                <section class="plans" style="background-color: #ffcd76;">
                     <h2>Gondor</h2>
                     <p>Com este plano você terá acesso a:</p><br>
                     <ul>
@@ -281,7 +281,7 @@
                     </ul><br>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn">Assine Já</button></a>
                 </section>
-                <section class="plans">
+                <section class="plans" style="background-color: #ffbd4a;">
                     <h2>Valfenda</h2>
                     <p>Com este plano você terá acesso a:</p><br>
                     <ul>
