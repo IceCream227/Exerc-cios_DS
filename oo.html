@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-black bg-primary">
+        <div class="container-fluid justify-content-center">
+            <span class="navbar-brand mb-0 h1 text-light">Prontuário Eletrônico</span>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <form>
+            <div class="card mb-4">
+                <div class="card-header bg-info text-light text-center">
+                    Dados do Paciente
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Nome</label><br>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Idade</label><br>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Sexo</label>
+                            <select class="form-select" aria-label="Default select example" required>
+                                <option value="1">Masculino</option>
+                                <option value="2">Feminino</option>
+                                <option value="3">Woke</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-info text-light text-center">
+                    Sinais Vitais
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label>Pressão Arterial</label><br>
+                            <input type="number" placeholder="Ex: 120/80" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Temperatura</label><br>
+                            <input type="number" placeholder="Ex: 37.0 ºC" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Frquência Cardíaca</label><br>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Saturação</label><br>
+                            <input type="number" placeholder="%" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-info text-light text-center">
+                    Evolução do Paciente
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label>Descreva a Evolução</label><br>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header bg-info text-center text-light">
+                    Medicação
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Medicamento</label><br>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Dosagem</label><br>
+                            <input type="text" class="form-control" placeholder="Ex: 3mg" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Horário</label><br>
+                            <input type="time" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-end mb-5">
+                <button class="btn btn-primary" type="submit">Salvar Prontuário</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
