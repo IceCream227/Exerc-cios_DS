@@ -13,8 +13,16 @@
         </div>
     </nav>
 
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <div id="resultado" class="alert alert-secondary d-none text-center"></div>
+            </li>
+        </ul>
+    </div>
+
     <div class="container mt-4">
-        <form>
+        <form onsubmit="mostrarDados(); return false;">
             <div class="card mb-4">
                 <div class="card-header bg-info text-light text-center">
                     Dados do Paciente
@@ -106,7 +114,38 @@
             </div>
         </form>
     </div>
+    <div class="toast position-fixed bottom-0 end-0 p-3" id="toastSuccess">
+        <div class="toast-header">
+            <strong class="me-auto">Sistema</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Prontuário salvo com sucesso!
+        </div>
+    </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        let toast = new bootstrap.Toast(document.getElementById('toastSuccess'));
+        toast.show();
+
+        let resultado = `
+        <h5>Prontuário do Paciente</h5>
+        Nome: ${nome}<br>
+        Idade: ${idade}<br>
+        Sexo: ${sexo}<br>
+        Pressão Arterial: ${pressao}<br>
+        Temperatura: ${temp}<br>
+        Frquência Cardíaca: ${freq}<br>
+        Saturação: ${sat}<br>
+        Evolução: ${ev}<br>
+        Medicamento: ${med}<br>
+        Dosagem: ${dos}<br>
+        Horário: ${hor}<br>
+        `;
+
+        let caixa = document.getElementById("resultado");
+        caixa.innerHTML = resultado;
+        caixa.classList.remove("d-none");
+    </script>
 </body>
 </html>
