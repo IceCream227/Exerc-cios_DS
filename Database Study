@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS DadosAlunos;
+
+CREATE TABLE DadosAlunos (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	nome TEXT,
+  	idade INTEGER,
+  	cidade TEXT,
+  	curso TEXT
+);
+
+INSERT INTO DadosAlunos (nome, idade, cidade, curso) VALUES ('Ana Clara', 19, 'Belo Horizonte', 'Análise de Sistemas'),
+('João Pedro', 22, 'Contagem', 'Análise de Sistemas'),
+('Mariana Souza', 20,'Betim', 'Administração'),
+('Carlos Henrique', 24, 'Belo Horizonte', 'Engenharia'),
+('Fernanda Lima', 21, 'Sabará', 'Análise de Sistemas'),
+('Lucas Martins', 18, 'Contagem', 'Administração'),
+('Juliana Rocha', 23, 'Betim', 'Engenharia'),
+('Camila Ferreira', 22, 'Sabará', 'Administração'),
+('Pedro Henrique', 20, 'Belo Horizonte', 'Análise de Sistemas'),
+('Rafael Souza', 25, 'Contagem', 'Engenharia');
+
+SELECT * FROM DadosAlunos;
