@@ -1,26 +1,33 @@
 public class Oloko {
     public static void main(String[] args) throws InterruptedException {
         int etapas = 0;
+        int bateria = 50;
 
-        for (int i=0;i<5;i++){
-
-            if (etapas == 0){
-            System.out.println("Etapa 1: Ligando Carro...");
-            Thread.sleep(1000);
-        } else if (etapas == 1){
-            System.out.println("Etapa 2: Sensores Ativados...");
-            Thread.sleep(2000);
-        } else if (etapas == 2){
-            System.out.println("Etapa 3: Modo Autônomo Ativado...");
-            Thread.sleep(3000);
-        } else if (etapas == 3){
-            System.out.println("Etapa 4: Melhor Rota Sendo Calculada...");
-            Thread.sleep(3000);
-        } else if (etapas == 4){
-            System.out.println("Etapa 5: Trajeto Sendo Iniciado...");
+        if (bateria <=30){
+            System.out.println("Bateria: " + bateria + "%");
+            System.out.println("Insuficiente Para Partida.");
         }
 
-        etapas++;
+        if(bateria>30){
+            System.out.println("Bateria: " + bateria + "%");
+            for (int i=0;i<5;i++){
+                if (etapas == 0){
+                    System.out.println("Etapa 1: Ligando Carro...");
+                    Thread.sleep(1000);
+                } else if (etapas == 1){
+                    System.out.println("Etapa 2: Sensores Ativados...");
+                    Thread.sleep(1000);
+                } else if (etapas == 2){
+                    System.out.println("Etapa 3: Modo Autônomo Ativado...");
+                    Thread.sleep(2000);
+                } else if (etapas == 3){
+                    System.out.println("Etapa 4: Melhor Rota Sendo Calculada...");
+                    Thread.sleep(3000);
+                } else if (etapas == 4){
+                    System.out.println("Etapa 5: Trajeto Sendo Iniciado...");
+                }
+                etapas++;
+            }
         }
     }
 }
