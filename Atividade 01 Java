@@ -1,14 +1,14 @@
 public class Oloko {
     public static void main(String[] args) throws InterruptedException {
         int etapas = 0;
-        int bateria = 50;
+        int bateria = 30;
 
-        if (bateria <=30){
+        if (bateria <30){
             System.out.println("Bateria: " + bateria + "%");
             System.out.println("Insuficiente Para Partida.");
         }
 
-        if(bateria>30){
+        if(bateria>=30){
             System.out.println("Bateria: " + bateria + "%");
             for (int i=0;i<5;i++){
                 if (etapas == 0){
@@ -26,6 +26,7 @@ public class Oloko {
                 } else if (etapas == 4){
                     System.out.println("Etapa 5: Trajeto Sendo Iniciado...");
                 }
+
                 etapas++;
             }
         }
