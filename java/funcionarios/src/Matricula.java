@@ -13,8 +13,8 @@ public class Matricula {
     }
 
     public void Show(){
-        if(Verify()==true) {
-            System.out.println("Pode trabalhar:");
+        if(Verify()) {
+            System.out.println("Pode trabalhar");
             System.out.println("Nome do Funcionário: " + nome);
             System.out.println("Matrícula: " + matricula);
             System.out.println("Ativo: " + ativo);
@@ -24,7 +24,7 @@ public class Matricula {
 
         }
         else {
-            System.out.println("Não pode trabalhar:");
+            System.out.println("Não pode trabalhar");
             System.out.println("Nome do Funcionário: "+nome);
             System.out.println("Matrícula: "+matricula);
             System.out.println("Cargo: "+cargo);
