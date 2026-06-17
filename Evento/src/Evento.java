@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Evento {
 
     private int eventId;
@@ -23,7 +25,7 @@ public class Evento {
         else if(numTickets<30){
             System.out.println("Ainda há bastante vagas.");
         }
-        else if(numTickets>30){
+        else if(numTickets>=30){
             System.out.println("Diversas vagas disponíveis.");
         }
     }
@@ -56,11 +58,16 @@ public class Evento {
         System.out.println("Local do evento: "+eventPlace);
         System.out.println("O evento durará: "+time+" horas.");
         ticketDiscount();
+
         if (verifyFreeTickets()){
             ticketsNumber();
         }
         else {
             System.out.println("Não há mais vagas para este evento.");
+            JOptionPane.showMessageDialog(null,
+                    "O evento '" + eventName + "' não possui mais ingressos disponíveis!",
+                    "Ingressos Esgotados",
+                    JOptionPane.WARNING_MESSAGE);
         }
     }
 }
